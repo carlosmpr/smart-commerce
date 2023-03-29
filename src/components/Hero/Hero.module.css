@@ -1,0 +1,54 @@
+.HeroWrapper {
+  width: 100%;
+  padding: 60px 40px;
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+}
+
+.HeroWrapperReverse {
+  flex-direction: row-reverse;
+}
+
+.HeroContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.HeroContent h1 {
+  font-weight: 600;
+  font-size: 5rem;
+
+  /* or 112% */
+
+  text-transform: uppercase;
+}
+
+.HeroImage {
+  width: 50%;
+  display: flex;
+ align-items: center;
+
+  padding: 110px;
+}
+
+.HeroImage img {
+  width: 65%;
+}
+
+@media only screen and (max-width: 490px) {
+  .HeroWrapper {
+    padding: 15px;
+  }
+  .HeroWrapper {
+    flex-direction: column;
+  }
+
+  .HeroImage {
+    width: 100%;
+  }
+}

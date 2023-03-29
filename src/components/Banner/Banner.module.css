@@ -1,0 +1,23 @@
+.Wrapper{
+     display: flex;
+     flex:1;
+     align-items: center;
+     justify-content: space-between;
+     gap: 20px;
+}
+
+.Reverse{
+    flex-direction:  row-reverse;
+}
+
+.Wrapper h2{
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.Content{
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}

@@ -1,0 +1,25 @@
+.Wrapper {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.Wrapper h2 {
+  position: absolute;
+  top: -10px;
+  background: white;
+  font-weight: 800;
+  padding: 20px;
+}
+
+
+.Content{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 1px solid gray;
+    overflow: hidden;
+    padding: 40px 20px;
+}
