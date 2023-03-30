@@ -8,10 +8,11 @@ type BannerProps = {
     backgroundColor?: string
     title:string;
     description:string;
+    color?:string;
 }
-export default function Banner({image, width="40%", reverse=false, backgroundColor, title, description}: BannerProps) {
+export default function Banner({image, width="40%", reverse=false, backgroundColor, title, description, color}: BannerProps) {
   return (
-    <div className={`${styles.Wrapper} ${reverse ? styles.Reverse : ""}`} style={{background:backgroundColor}}>
+    <div className={`${styles.Wrapper} ${reverse ? styles.Reverse : ""}`} style={{background:backgroundColor, color:color}}>
       <img src={image} style={{width: width}}/>
       <div className={styles.Content}>
         <h2>{title}</h2>

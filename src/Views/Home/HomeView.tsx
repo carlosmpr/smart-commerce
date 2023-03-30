@@ -1,24 +1,17 @@
-import Page from "../../PageLayout/Page/Page";
+import Page from "../../components/PageLayout/Page/Page";
 import React, { useState } from "react";
-import Hero from "../../Hero/Hero";
-import Content from "../../PageLayout/Content/Content";
-import Categories from "../../Categories/Categories";
-import Section from "../../Section/Section";
-import Button from "../../Buttons/Button";
-import Banner from "../../Banner/Banner";
-import AnimatedCheckbox from "../../CheckBox/CheckBox";
-import ProductCard from "../../ProductCard/ProductCard";
-import Footer from "../../Footer/Footer";
-
+import Hero from "../../components/Hero/Hero";
+import Content from "../../components/PageLayout/Content/Content";
+import Categories from "../../components/Categories/Categories";
+import Section from "../../components/Section/Section";
+import Button from "../../components/Buttons/Button";
+import Banner from "../../components/Banner/Banner";
+import AnimatedCheckbox from "../../components/CheckBox/CheckBox";
+import ProductCard from "../../components/ProductCard/ProductCard";
+import Footer from "../../components/Footer/Footer";
+import ToggleMenu from "../../components/ToggleMenu/ToggleMenu";
 export default function HomeView() {
   const [checked, setChecked] = useState(false);
-  const NavBarItems = [
-    { title: "HOME", href: "/" },
-    { title: "SHOP", href: "/" },
-    { title: "BLOG", href: "/" },
-    { title: "CONTACT US", href: "/" },
-    { title: "SEARCH", href: "/" },
-  ];
 
   const Menu = [
     "Best Sellers",
@@ -29,7 +22,7 @@ export default function HomeView() {
     "TRENDING",
   ];
   return (
-    <Page NavbarItems={...NavBarItems}>
+    <>
       <Content backgroundImageUrl="/images/bg.png">
         <Hero
           title={"SUMMER SALE GEt 30% OFF On all dress."}
@@ -98,17 +91,7 @@ export default function HomeView() {
             top: "0",
           }}
         >
-          <h3 style={{ fontWeight: "900", fontSize: "1.6rem" }}>
-            Shop Some Wear
-          </h3>
-          {Menu.map((item: string) => (
-            <AnimatedCheckbox
-              key={item}
-              label={item}
-              checked={checked}
-              onChange={(isChecked: boolean) => setChecked(isChecked)}
-            />
-          ))}
+           <ToggleMenu title={"Brand"} menuItems={Menu} checked={checked} onChange={(isChecked: boolean) => setChecked(isChecked)} />
         </div>
 
         <div
@@ -182,11 +165,9 @@ export default function HomeView() {
           description="You can choose the best option for you, and it does not matter whether you are in Prague or San Francisco. We will deliver your purchase anywhere!"
           image="/images/girl5.png"
           width="60%"
-        
-        
         />
       </Section>
-      <Footer />
-    </Page>
+    
+    </>
   );
 }

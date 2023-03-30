@@ -1,19 +1,15 @@
 import React from "react";
-import Wrapper from "../Wrapper/Wrapper";
-import Content from "../Content/Content";
+import Footer from "../../Footer/Footer";
 import Navbar from "../../Navbar/Navbar";
 
 //@ts-ignore
 export default function Page({ NavbarItems, children }) {
   return (
-    <div style={{overflow:'hidden'}}>
-    <Navbar NavbarItems={NavbarItems} title={"SmartCommerce"} />
-    
-   
-
-        {children}
-     
-
-    </div>
+    <>
+      <Navbar NavbarItems={NavbarItems} title={"SmartCommerce"} />
+      <div style={{height:'8vw'}}></div>
+      {children}
+      <Footer />
+    </>
   );
 }
